@@ -1,6 +1,6 @@
 <template>
-  <ion-page>
-    <ion-header :translucent="true">
+
+<ion-header :translucent="true">
       <ion-toolbar>
         <ion-title>Sell</ion-title>
       </ion-toolbar>
@@ -22,10 +22,10 @@
               <div class="mt-4 flex justify-between">
                 <div>
                   <h3 class="text-sm text-gray-700">
-                    <a href="/bid">
+                    <ion-nav-link router-direction="forward" :component="cart">
                       <span aria-hidden="true" class="absolute inset-0"></span>
                       กระป๋อง
-                    </a>
+                    </ion-nav-link>
                   </h3>
                   <p class="mt-1 text-sm text-gray-500">(ราคาขายต่อ กก.)</p>
                 </div>
@@ -101,13 +101,22 @@
       </div>
 
     </ion-content>
-  </ion-page>
+
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
+import { IonNavLink } from '@ionic/vue';
+import SellCartPageVue from './SellCartPage.vue';
 
-export default defineComponent({});
+export default defineComponent({
+  components: { IonNavLink },
+  setup() {
+    return {
+      cart: SellCartPageVue
+    }
+  }
+});
 </script>
 
 <style scoped>
