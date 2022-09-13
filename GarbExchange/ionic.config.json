@@ -1,0 +1,7 @@
+{
+  "name": "GarbExchange",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue"
+}
