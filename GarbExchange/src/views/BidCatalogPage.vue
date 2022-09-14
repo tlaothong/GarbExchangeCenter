@@ -111,13 +111,13 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 import { IonNavLink } from '@ionic/vue';
-import BidCartPageVue from './BidCartPage.vue';
+import BidProductPageVue from './BidProductPage.vue';
 
 export default defineComponent({
   components: { IonNavLink },
   setup() {
     return {
-      cart: BidCartPageVue
+      cart: BidProductPageVue
     };
   }
 });

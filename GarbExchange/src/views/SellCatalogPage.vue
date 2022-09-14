@@ -107,13 +107,13 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 import { IonNavLink } from '@ionic/vue';
-import SellCartPageVue from './SellCartPage.vue';
+import SellProductPageVue from './SellProductPage.vue';
 
 export default defineComponent({
   components: { IonNavLink },
   setup() {
     return {
-      cart: SellCartPageVue
+      cart: SellProductPageVue
     }
   }
 });
