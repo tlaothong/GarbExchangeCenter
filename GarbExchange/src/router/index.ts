@@ -18,8 +18,20 @@ const routes: Array<RouteRecordRaw> = [
   },
   {
     path: '/sell',
-    component: () => import('../views/SellCatalogPage.vue')
-  }
+    component: () => import('../views/SellPage.vue')
+  },
+  {
+    path: '/sell-cart',
+    component: () => import('../views/SellCartPage.vue')
+  },
+  {
+    path: '/bid',
+    component: () => import('../views/BidPage.vue')
+  },
+  {
+    path: '/bid-cart',
+    component: () => import('../views/BidCartPage.vue')
+  },
 ]
 
 const router = createRouter({
