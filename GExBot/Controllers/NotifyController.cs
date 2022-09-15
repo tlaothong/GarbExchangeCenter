@@ -41,7 +41,7 @@ namespace EchoBot.Controllers
                 StatusCode = (int)HttpStatusCode.OK,
             };
         }
-
+        
         private async Task BotCallback(ITurnContext turnContext, CancellationToken cancellationToken)
         {
             // Create a HeroCard with options for the user to interact with the bot.
@@ -56,6 +56,48 @@ namespace EchoBot.Controllers
                     // In this code the emulator is accounted for with the 'title' parameter, but in other channels you may
                     // need to provide a value for other parameters like 'text' or 'displayText'.
                     new CardAction(ActionTypes.ImBack, title: "ติดต่อเพื่อทำการซื้อ", value: "สนใจซื้อ"),
+                },
+                Images = new List<CardImage>
+                {
+                    new CardImage("http://localhost:3978/images/evidence.jpg", "Action Now!"),
+                }
+            };
+
+            var reply = MessageFactory.Attachment(card.ToAttachment());
+            await turnContext.SendActivityAsync(reply, cancellationToken);
+        }
+
+        [HttpGet("sell")]
+        public async Task<IActionResult> GetSell()
+        {
+            foreach (var conversationReference in _conversationReferences.Values)
+            {
+                await ((BotAdapter)_adapter).ContinueConversationAsync(_appId, conversationReference, SellBotCallback, default(CancellationToken));
+            }
+            
+            // Let the caller know proactive messages have been sent
+            return new ContentResult()
+            {
+                Content = "<html><body><h1>Sell</h1> Proactive messages have been sent.</body></html>",
+                ContentType = "text/html",
+                StatusCode = (int)HttpStatusCode.OK,
+            };
+        }
+        
+        private async Task SellBotCallback(ITurnContext turnContext, CancellationToken cancellationToken)
+        {
+            // Create a HeroCard with options for the user to interact with the bot.
+            var card = new HeroCard
+            {
+                Title = "พบผู้ต้องการซื้อสินค้าของคุณ",
+                Subtitle = "มีผู้เสนอซื้อตรงกับสินค้าที่คุณเสนอขาย",
+                Text = "กดปุ่มด้านล่างเพื่อยืนยันการขายสินค้ารายการนี้",
+                Buttons = new List<CardAction>
+                {
+                    // Note that some channels require different values to be used in order to get buttons to display text.
+                    // In this code the emulator is accounted for with the 'title' parameter, but in other channels you may
+                    // need to provide a value for other parameters like 'text' or 'displayText'.
+                    new CardAction(ActionTypes.ImBack, title: "ยืนยันพร้อมขายสินค้า", value: "ขายสินค้า"),
                 },
                 Images = new List<CardImage>
                 {

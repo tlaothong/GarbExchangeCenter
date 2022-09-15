@@ -39,9 +39,14 @@ namespace EchoBot.Bots
                 var replyText = $"กรุณาติดต่อคุณ สุวัตร์ ศรีโททุม เบอร์โทร 0812600247 เพื่อซื้อขวดน้ำ PET ใส ในราคา 8.50 บาท/หน่วย";
                 await turnContext.SendActivityAsync(MessageFactory.Text(replyText, replyText), cancellationToken);
             }
+            else if (turnContext.Activity.Text == "ขายสินค้า")
+            {
+                var replyText = $"คุณได้ยืนยันขาย ขวดน้ำ PET ใส ในราคา 8.50 บาท/หน่วย จำนวน 30 กก. จะมีผู้ซื้อติดต่อมาภายใน 3 วัน หากพ้นกำหนดแล้วยังไม่มีผู้ซื้อติดต่อเข้ามา สามารถแจ้งระบบกลับมาเพื่อติดตามผู้ซื้ออีกครั้ง";
+                await turnContext.SendActivityAsync(MessageFactory.Text(replyText, replyText), cancellationToken);
+            }
             else
             {
-                var replyText = $"Echo: {turnContext.Activity.Text}";
+                var replyText = $"คุณเลือก: {turnContext.Activity.Text}";
                 await turnContext.SendActivityAsync(MessageFactory.Text(replyText, replyText), cancellationToken);
                 await DisplayOptionsAsync(turnContext, cancellationToken);
             }
