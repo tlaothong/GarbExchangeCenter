@@ -93,7 +93,7 @@
                         <div>
                           <div class="flex justify-between text-base font-medium text-gray-900">
                             <h3>
-                              <a href="#">ขวดพลาสติก</a>
+                              <a href="#">พลาสติก - ขวดน้ำ PET ใส</a>
                             </h3>
                             <p class="ml-4">฿350.00</p>
                           </div>
