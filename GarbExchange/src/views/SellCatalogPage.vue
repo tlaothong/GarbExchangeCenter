@@ -24,12 +24,12 @@
                   <h3 class="text-sm text-gray-700">
                     <ion-nav-link router-direction="forward" :component="cart">
                       <span aria-hidden="true" class="absolute inset-0"></span>
-                      กระป๋อง
+                      เศษเหล็ก
                     </ion-nav-link>
                   </h3>
                   <p class="mt-1 text-sm text-gray-500">(ราคาขายต่อ กก.)</p>
                 </div>
-                <p class="text-sm font-medium text-gray-900">฿35</p>
+                <p class="text-sm font-medium text-gray-900">฿5</p>
               </div>
             </div>
 
@@ -43,14 +43,14 @@
               <div class="mt-4 flex justify-between">
                 <div>
                   <h3 class="text-sm text-gray-700">
-                    <a href="#">
+                    <ion-nav-link router-direction="forward" :component="cart">
                       <span aria-hidden="true" class="absolute inset-0"></span>
-                      ขวดพลาสติก
-                    </a>
+                      พลาสติก
+                    </ion-nav-link>
                   </h3>
                   <p class="mt-1 text-sm text-gray-500">(ราคาขายต่อ กก.)</p>
                 </div>
-                <p class="text-sm font-medium text-gray-900">฿25</p>
+                <p class="text-sm font-medium text-gray-900">฿7</p>
               </div>
             </div>
 
@@ -71,7 +71,7 @@
                   </h3>
                   <p class="mt-1 text-sm text-gray-500">(ราคาขายต่อ กก.)</p>
                 </div>
-                <p class="text-sm font-medium text-gray-900">฿30</p>
+                <p class="text-sm font-medium text-gray-900">฿9</p>
               </div>
             </div>
 
@@ -87,12 +87,12 @@
                   <h3 class="text-sm text-gray-700">
                     <a href="#">
                       <span aria-hidden="true" class="absolute inset-0"></span>
-                      กล่องกระดาษ
+                      เศษกระดาษ
                     </a>
                   </h3>
                   <p class="mt-1 text-sm text-gray-500">(ราคาขายต่อ กก.)</p>
                 </div>
-                <p class="text-sm font-medium text-gray-900">฿25</p>
+                <p class="text-sm font-medium text-gray-900">฿4</p>
               </div>
             </div>
 

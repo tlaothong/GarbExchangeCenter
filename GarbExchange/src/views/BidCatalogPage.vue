@@ -28,12 +28,12 @@
                 <h3 class="text-sm text-gray-700">
                   <ion-nav-link router-direction="forward" :component="cart">
                     <span aria-hidden="true" class="absolute inset-0"></span>
-                    กระป๋อง
+                    เศษเหล็ก
                   </ion-nav-link>
                 </h3>
                 <p class="mt-1 text-sm text-gray-500">(ราคาต่อ กก.)</p>
               </div>
-              <p class="text-sm font-medium text-gray-900">฿35</p>
+              <p class="text-sm font-medium text-gray-900">฿4</p>
             </div>
           </div>
 
@@ -49,12 +49,12 @@
                 <h3 class="text-sm text-gray-700">
                   <a href="#">
                     <span aria-hidden="true" class="absolute inset-0"></span>
-                    ขวดพลาสติก
+                    พลาสติก
                   </a>
                 </h3>
                 <p class="mt-1 text-sm text-gray-500">(ราคาต่อ กก.)</p>
               </div>
-              <p class="text-sm font-medium text-gray-900">฿25</p>
+              <p class="text-sm font-medium text-gray-900">฿9</p>
             </div>
           </div>
 
@@ -75,7 +75,7 @@
                 </h3>
                 <p class="mt-1 text-sm text-gray-500">(ราคาต่อ กก.)</p>
               </div>
-              <p class="text-sm font-medium text-gray-900">฿30</p>
+              <p class="text-sm font-medium text-gray-900">฿6</p>
             </div>
           </div>
 
@@ -91,12 +91,12 @@
                 <h3 class="text-sm text-gray-700">
                   <a href="#">
                     <span aria-hidden="true" class="absolute inset-0"></span>
-                    กล่องกระดาษ
+                    เศษกระดาษ
                   </a>
                 </h3>
                 <p class="mt-1 text-sm text-gray-500">(ราคาต่อ กก.)</p>
               </div>
-              <p class="text-sm font-medium text-gray-900">฿25</p>
+              <p class="text-sm font-medium text-gray-900">฿3</p>
             </div>
           </div>
 

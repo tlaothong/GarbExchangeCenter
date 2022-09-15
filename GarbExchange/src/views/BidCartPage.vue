@@ -53,34 +53,7 @@
 
               <div class="mt-8">
                 <div class="flow-root">
-                  <ul role="list" class="-my-6 divide-y divide-gray-200">
-                    <li class="flex py-6">
-                      <div class="h-24 w-24 flex-shrink-0 overflow-hidden rounded-md border border-gray-200">
-                        <img src="/assets/images/a2.jpg"
-                          alt="Salmon orange fabric pouch with match zipper, gray zipper pull, and adjustable hip belt."
-                          class="h-full w-full object-cover object-center">
-                      </div>
-
-                      <div class="ml-4 flex flex-1 flex-col">
-                        <div>
-                          <div class="flex justify-between text-base font-medium text-gray-900">
-                            <h3>
-                              <a href="#">กระป๋อง</a>
-                            </h3>
-                            <p class="ml-4">฿90.00</p>
-                          </div>
-                          <p class="mt-1 text-sm text-gray-500">45 บาท/กก.</p>
-                        </div>
-                        <div class="flex flex-1 items-end justify-between text-sm">
-                          <p class="text-gray-500">Qty 2</p>
-
-                          <div class="flex">
-                            <button type="button"
-                              class="font-medium text-indigo-600 hover:text-indigo-500">Remove</button>
-                          </div>
-                        </div>
-                      </div>
-                    </li>
+                  <ul role="list" class="-my-6 divide-y divide-gray-200">                   
 
                     <li class="flex py-6">
                       <div class="h-24 w-24 flex-shrink-0 overflow-hidden rounded-md border border-gray-200">
@@ -93,14 +66,43 @@
                         <div>
                           <div class="flex justify-between text-base font-medium text-gray-900">
                             <h3>
-                              <a href="#">ขวดพลาสติก</a>
+                              <a href="#">พลาสติก - ขวดน้ำ PET ใส</a>
                             </h3>
-                            <p class="ml-4">฿32.00</p>
+                            <p class="ml-4">฿270.00</p>
                           </div>
-                          <p class="mt-1 text-sm text-gray-500">16 บาท/กก.</p>
+                          <p class="mt-1 text-sm text-gray-500">9 บาท/กก.</p>
                         </div>
                         <div class="flex flex-1 items-end justify-between text-sm">
-                          <p class="text-gray-500">Qty 2</p>
+                          <p class="text-gray-500">Qty 30</p>
+
+                          <div class="flex">
+                            <button type="button"
+                              class="font-medium text-indigo-600 hover:text-indigo-500">Remove</button>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+
+                    <!-- More products... -->
+                    <li class="flex py-6">
+                      <div class="h-24 w-24 flex-shrink-0 overflow-hidden rounded-md border border-gray-200">
+                        <img src="/assets/images/a2.jpg"
+                          alt="Salmon orange fabric pouch with match zipper, gray zipper pull, and adjustable hip belt."
+                          class="h-full w-full object-cover object-center">
+                      </div>
+
+                      <div class="ml-4 flex flex-1 flex-col">
+                        <div>
+                          <div class="flex justify-between text-base font-medium text-gray-900">
+                            <h3>
+                              <a href="#">เศษเหล็ก - กระป๋อง</a>
+                            </h3>
+                            <p class="ml-4">฿800.00</p>
+                          </div>
+                          <p class="mt-1 text-sm text-gray-500">4 บาท/กก.</p>
+                        </div>
+                        <div class="flex flex-1 items-end justify-between text-sm">
+                          <p class="text-gray-500">Qty 200</p>
 
                           <div class="flex">
                             <button type="button"
@@ -119,7 +121,7 @@
             <div class="border-t border-gray-200 py-6 px-4 sm:px-6">
               <div class="flex justify-between text-base font-medium text-gray-900">
                 <p>Subtotal</p>
-                <p>฿122.00</p>
+                <p>฿1,070.00</p>
               </div>
               <p class="mt-0.5 text-sm text-gray-500">Shipping and taxes calculated at checkout.</p>
               <div class="mt-6">

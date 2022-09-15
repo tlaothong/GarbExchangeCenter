@@ -16,17 +16,17 @@
           <div class="group relative">
             <div
               class="min-h-8 aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none lg:h-80">
-              <img src="/assets/images/a2.jpg" alt="Front of men&#039;s Basic Tee in black."
+              <img src="/assets/images/b4.jpg" alt="Front of men&#039;s Basic Tee in black."
                 class="h-full w-full object-cover object-center lg:h-full lg:w-full">
             </div>
             <div class="mt-4 flex justify-between">
               <div>
                 <h3 class="text-sm text-gray-700">
-                  กระป๋อง
+                  พลาสติก
                 </h3>
                 <p class="mt-1 text-sm text-gray-500">(ราคาขายต่อ กก.)</p>
               </div>
-              <p class="text-sm font-medium text-gray-900">฿35</p>
+              <p class="text-sm font-medium text-gray-900">฿7</p>
             </div>
           </div>
 
@@ -37,7 +37,7 @@
             <!-- Options -->
             <div class="mt-4 lg:mt-0">
               <h2 class="sr-only">Product information</h2>
-              <p class="text-3xl tracking-tight text-gray-900">$192</p>
+              <p class="text-3xl tracking-tight text-gray-900">$350</p>
 
               <!-- Reviews -->
               <div class="mt-6">

@@ -24,9 +24,9 @@
                 <h3 class="text-sm text-gray-700">
                   กระป๋อง
                 </h3>
-                <p class="mt-1 text-sm text-gray-500">(ราคาขายต่อ กก.)</p>
+                <p class="mt-1 text-sm text-gray-500">(ราคาเสนอต่อ กก.)</p>
               </div>
-              <p class="text-sm font-medium text-gray-900">฿35</p>
+              <p class="text-sm font-medium text-gray-900">฿4</p>
             </div>
           </div>
 
@@ -37,7 +37,7 @@
             <!-- Options -->
             <div class="mt-4 lg:mt-0">
               <h2 class="sr-only">Product information</h2>
-              <p class="text-3xl tracking-tight text-gray-900">$192</p>
+              <p class="text-3xl tracking-tight text-gray-900">$800</p>
 
               <!-- Reviews -->
               <div class="mt-6">

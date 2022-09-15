@@ -54,7 +54,7 @@
               <div class="mt-8">
                 <div class="flow-root">
                   <ul role="list" class="-my-6 divide-y divide-gray-200">
-                    <li class="flex py-6">
+                    <!-- <li class="flex py-6">
                       <div class="h-24 w-24 flex-shrink-0 overflow-hidden rounded-md border border-gray-200">
                         <img src="/assets/images/a2.jpg"
                           alt="Salmon orange fabric pouch with match zipper, gray zipper pull, and adjustable hip belt."
@@ -80,7 +80,7 @@
                           </div>
                         </div>
                       </div>
-                    </li>
+                    </li> -->
 
                     <li class="flex py-6">
                       <div class="h-24 w-24 flex-shrink-0 overflow-hidden rounded-md border border-gray-200">
@@ -95,12 +95,12 @@
                             <h3>
                               <a href="#">ขวดพลาสติก</a>
                             </h3>
-                            <p class="ml-4">฿32.00</p>
+                            <p class="ml-4">฿350.00</p>
                           </div>
-                          <p class="mt-1 text-sm text-gray-500">16 บาท/กก.</p>
+                          <p class="mt-1 text-sm text-gray-500">7 บาท/กก.</p>
                         </div>
                         <div class="flex flex-1 items-end justify-between text-sm">
-                          <p class="text-gray-500">Qty 2</p>
+                          <p class="text-gray-500">Qty 50</p>
 
                           <div class="flex">
                             <button type="button"
@@ -119,7 +119,7 @@
             <div class="border-t border-gray-200 py-6 px-4 sm:px-6">
               <div class="flex justify-between text-base font-medium text-gray-900">
                 <p>Subtotal</p>
-                <p>฿122.00</p>
+                <p>฿350.00</p>
               </div>
               <p class="mt-0.5 text-sm text-gray-500">Shipping and taxes calculated at checkout.</p>
               <div class="mt-6">
