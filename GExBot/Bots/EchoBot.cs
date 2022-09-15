@@ -33,9 +33,18 @@ namespace EchoBot.Bots
         protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
         {
             SetConversationReference(turnContext.Activity as Activity);
-            var replyText = $"Echo: {turnContext.Activity.Text}";
-            await turnContext.SendActivityAsync(MessageFactory.Text(replyText, replyText), cancellationToken);
-            await DisplayOptionsAsync(turnContext, cancellationToken);
+
+            if (turnContext.Activity.Text == "สนใจซื้อ")
+            {
+                var replyText = $"กรุณาติดต่อคุณ สุวัตร์ ศรีโททุม เบอร์โทร 0812600247 เพื่อซื้อขวดน้ำ PET ใส ในราคา 8.50 บาท/หน่วย";
+                await turnContext.SendActivityAsync(MessageFactory.Text(replyText, replyText), cancellationToken);
+            }
+            else
+            {
+                var replyText = $"Echo: {turnContext.Activity.Text}";
+                await turnContext.SendActivityAsync(MessageFactory.Text(replyText, replyText), cancellationToken);
+                await DisplayOptionsAsync(turnContext, cancellationToken);
+            }
         }
 
         protected override async Task OnMembersAddedAsync(IList<ChannelAccount> membersAdded, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)

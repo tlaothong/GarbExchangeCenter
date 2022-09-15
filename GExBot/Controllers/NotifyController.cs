@@ -1,4 +1,5 @@
 using System.Collections.Concurrent;
+using System.Collections.Generic;
 using System.Net;
 using System.Threading;
 using System.Threading.Tasks;
@@ -43,7 +44,27 @@ namespace EchoBot.Controllers
 
         private async Task BotCallback(ITurnContext turnContext, CancellationToken cancellationToken)
         {
-            await turnContext.SendActivityAsync("proactive hello");
+            // Create a HeroCard with options for the user to interact with the bot.
+            var card = new HeroCard
+            {
+                Title = "พบสินค้าที่ต้องการ",
+                Subtitle = "มีผู้เสนอขายตรงกับความต้องการของคุณ",
+                Text = "กดปุ่มด้านล่างเพื่อติดต่อผู้เสนอขายสินค้ารายการนี้",
+                Buttons = new List<CardAction>
+                {
+                    // Note that some channels require different values to be used in order to get buttons to display text.
+                    // In this code the emulator is accounted for with the 'title' parameter, but in other channels you may
+                    // need to provide a value for other parameters like 'text' or 'displayText'.
+                    new CardAction(ActionTypes.ImBack, title: "ติดต่อเพื่อทำการซื้อ", value: "สนใจซื้อ"),
+                },
+                Images = new List<CardImage>
+                {
+                    new CardImage("http://localhost:3978/images/evidence.jpg", "Action Now!"),
+                }
+            };
+
+            var reply = MessageFactory.Attachment(card.ToAttachment());
+            await turnContext.SendActivityAsync(reply, cancellationToken);
         }
     }
 }
