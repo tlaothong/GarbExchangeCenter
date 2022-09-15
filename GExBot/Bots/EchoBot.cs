@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections.Concurrent;
+using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Bot.Builder;
@@ -8,8 +9,30 @@ namespace EchoBot.Bots
 {
     public class EchoBot : ActivityHandler
     {
+        // Dependency injected dictionary for storing ConversationReference objects used in NotifyController to proactively message users
+        private readonly ConcurrentDictionary<string, ConversationReference> _conversationReferences;
+
+        public EchoBot(ConcurrentDictionary<string, ConversationReference> conversationReferences)
+        {
+            this._conversationReferences = conversationReferences;
+        }
+
+        private void SetConversationReference(Activity activity)
+        {
+            var conversationReference = activity.GetConversationReference();
+            _conversationReferences.AddOrUpdate(conversationReference.User.Id, conversationReference, (key, newValue) => conversationReference);
+        }
+
+        protected override Task OnConversationUpdateActivityAsync(ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
+        {
+            SetConversationReference(turnContext.Activity as Activity);
+
+            return base.OnConversationUpdateActivityAsync(turnContext, cancellationToken);
+        }
+
         protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
         {
+            SetConversationReference(turnContext.Activity as Activity);
             var replyText = $"Echo: {turnContext.Activity.Text}";
             await turnContext.SendActivityAsync(MessageFactory.Text(replyText, replyText), cancellationToken);
             await DisplayOptionsAsync(turnContext, cancellationToken);
@@ -17,7 +40,7 @@ namespace EchoBot.Bots
 
         protected override async Task OnMembersAddedAsync(IList<ChannelAccount> membersAdded, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
         {
-            var welcomeText = "Hello and welcome!";
+            var welcomeText = "ยินดีต้อนรับสู่ Line OA ศูนย์ซื้อขายขยะชุมชนอ่างน้ำพาน!";
             foreach (var member in membersAdded)
             {
                 if (member.Id != turnContext.Activity.Recipient.Id)
