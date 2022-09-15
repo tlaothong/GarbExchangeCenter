@@ -26,7 +26,7 @@
                 </h3>
                 <p class="mt-1 text-sm text-gray-500">(ราคาเสนอต่อ กก.)</p>
               </div>
-              <p class="text-sm font-medium text-gray-900">฿4</p>
+              <p class="text-sm font-medium text-gray-900">฿5 - (4)</p>
             </div>
           </div>
 

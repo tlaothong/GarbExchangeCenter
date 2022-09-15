@@ -33,7 +33,7 @@
                 </h3>
                 <p class="mt-1 text-sm text-gray-500">(ราคาต่อ กก.)</p>
               </div>
-              <p class="text-sm font-medium text-gray-900">฿4</p>
+              <p class="text-sm font-medium text-gray-900">฿5</p>
             </div>
           </div>
 
@@ -75,7 +75,7 @@
                 </h3>
                 <p class="mt-1 text-sm text-gray-500">(ราคาต่อ กก.)</p>
               </div>
-              <p class="text-sm font-medium text-gray-900">฿6</p>
+              <p class="text-sm font-medium text-gray-900">฿8</p>
             </div>
           </div>
 
@@ -96,7 +96,7 @@
                 </h3>
                 <p class="mt-1 text-sm text-gray-500">(ราคาต่อ กก.)</p>
               </div>
-              <p class="text-sm font-medium text-gray-900">฿3</p>
+              <p class="text-sm font-medium text-gray-900">฿3.9</p>
             </div>
           </div>
 
