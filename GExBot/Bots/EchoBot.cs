@@ -34,8 +34,8 @@ namespace EchoBot.Bots
             // Create a HeroCard with options for the user to interact with the bot.
             var card = new HeroCard
             {
-                Title = "ตลาดขยะ",
-                Subtitle = "ศูนย์ซื้อ-ขาย แลกเปลี่ยนขยะ",
+                Title = "ตลาดขยะอ่างน้ำพาน",
+                Subtitle = "ศูนย์ซื้อ-ขาย แลกเปลี่ยนขยะชุมชนอ่างน้ำพาน",
                 Text = "You can upload an image or select one of the following choices",
                 Buttons = new List<CardAction>
                 {
@@ -48,7 +48,7 @@ namespace EchoBot.Bots
                 },
                 Images = new List<CardImage>
                 {
-                    new CardImage("http://localhost:3978/images/action.jpg", "Action Now!"),
+                    new CardImage("http://localhost:3978/images/brand-logo.jpg", "Action Now!"),
                 }
             };
 
