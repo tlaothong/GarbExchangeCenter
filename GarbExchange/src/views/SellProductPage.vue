@@ -37,7 +37,7 @@
             <!-- Options -->
             <div class="mt-4 lg:mt-0">
               <h2 class="sr-only">Product information</h2>
-              <p class="text-3xl tracking-tight text-gray-900">$350</p>
+              <p class="text-3xl tracking-tight text-gray-900">฿350</p>
 
               <!-- Reviews -->
               <div class="mt-6">

@@ -36,7 +36,7 @@ namespace EchoBot.Bots
 
             if (turnContext.Activity.Text == "สนใจซื้อ")
             {
-                var replyText = $"กรุณาติดต่อคุณ สุวัตร์ ศรีโททุม เบอร์โทร 0812600247 เพื่อซื้อขวดน้ำ PET ใส ในราคา 8.50 บาท/หน่วย";
+                var replyText = $"กรุณาติดต่อคุณ ประภาส อำคา เบอร์โทร 0939314179 เพื่อซื้อขวดน้ำ PET ใส ในราคา 8.50 บาท/หน่วย";
                 await turnContext.SendActivityAsync(MessageFactory.Text(replyText, replyText), cancellationToken);
             }
             else if (turnContext.Activity.Text == "ขายสินค้า")
@@ -54,7 +54,7 @@ namespace EchoBot.Bots
 
         protected override async Task OnMembersAddedAsync(IList<ChannelAccount> membersAdded, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
         {
-            var welcomeText = "ยินดีต้อนรับสู่ Line OA ศูนย์ซื้อขายขยะชุมชนอ่างน้ำพาน!";
+            var welcomeText = "ยินดีต้อนรับสู่ศูนย์ซื้อขายขยะวิสาหกิจชุมชนท่าเรือทะเลบัวแดงดอนคง!";
             foreach (var member in membersAdded)
             {
                 if (member.Id != turnContext.Activity.Recipient.Id)
@@ -71,9 +71,9 @@ namespace EchoBot.Bots
             // Create a HeroCard with options for the user to interact with the bot.
             var card = new HeroCard
             {
-                Title = "ตลาดขยะอ่างน้ำพาน",
-                Subtitle = "ศูนย์ซื้อ-ขาย แลกเปลี่ยนขยะชุมชนอ่างน้ำพาน",
-                Text = "You can upload an image or select one of the following choices",
+                Title = "ตลาดขยะวิสาหกิจชุมชนท่าเรือทะเลบัวแดงดอนคง",
+                Subtitle = "ศูนย์ซื้อ-ขาย แลกเปลี่ยนขยะวิสาหกิจชุมชนท่าเรือทะเลบัวแดงดอนคง",
+                Text = "เลือกดำเนินการตามความต้องการได้จากปุ่มด้านล่าง",
                 Buttons = new List<CardAction>
                 {
                     // Note that some channels require different values to be used in order to get buttons to display text.
@@ -85,7 +85,7 @@ namespace EchoBot.Bots
                 },
                 Images = new List<CardImage>
                 {
-                    new CardImage("http://localhost:3978/images/brand-logo.jpg", "Action Now!"),
+                    new CardImage("http://localhost:3978/images/brand-logo2.jpg", "Action Now!"),
                 }
             };
 

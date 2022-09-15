@@ -59,7 +59,7 @@ namespace EchoBot.Controllers
                 },
                 Images = new List<CardImage>
                 {
-                    new CardImage("http://localhost:3978/images/evidence.jpg", "Action Now!"),
+                    new CardImage("http://localhost:3978/images/evidence2.jpg", "Action Now!"),
                 }
             };
 
@@ -101,7 +101,7 @@ namespace EchoBot.Controllers
                 },
                 Images = new List<CardImage>
                 {
-                    new CardImage("http://localhost:3978/images/evidence.jpg", "Action Now!"),
+                    new CardImage("http://localhost:3978/images/evidence2.jpg", "Action Now!"),
                 }
             };
 
