@@ -1,9 +1,4 @@
-﻿// Copyright (c) Microsoft Corporation. All rights reserved.
-// Licensed under the MIT License.
-//
-// Generated with EchoBot .NET Template version v4.17.1
-
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Bot.Builder;
@@ -17,6 +12,7 @@ namespace EchoBot.Bots
         {
             var replyText = $"Echo: {turnContext.Activity.Text}";
             await turnContext.SendActivityAsync(MessageFactory.Text(replyText, replyText), cancellationToken);
+            await DisplayOptionsAsync(turnContext, cancellationToken);
         }
 
         protected override async Task OnMembersAddedAsync(IList<ChannelAccount> membersAdded, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
@@ -27,8 +23,37 @@ namespace EchoBot.Bots
                 if (member.Id != turnContext.Activity.Recipient.Id)
                 {
                     await turnContext.SendActivityAsync(MessageFactory.Text(welcomeText, welcomeText), cancellationToken);
+                    await DisplayOptionsAsync(turnContext, cancellationToken);
                 }
             }
+        }
+
+
+        private static async Task DisplayOptionsAsync(ITurnContext turnContext, CancellationToken cancellationToken)
+        {
+            // Create a HeroCard with options for the user to interact with the bot.
+            var card = new HeroCard
+            {
+                Title = "ตลาดขยะ",
+                Subtitle = "ศูนย์ซื้อ-ขาย แลกเปลี่ยนขยะ",
+                Text = "You can upload an image or select one of the following choices",
+                Buttons = new List<CardAction>
+                {
+                    // Note that some channels require different values to be used in order to get buttons to display text.
+                    // In this code the emulator is accounted for with the 'title' parameter, but in other channels you may
+                    // need to provide a value for other parameters like 'text' or 'displayText'.
+                    new CardAction(ActionTypes.OpenUrl, title: "1. ต้องการซื้อ", value: "http://localhost:8100/sell"),
+                    new CardAction(ActionTypes.OpenUrl, title: "2. ต้องการเสนอขาย", value: "http://localhost:8100/bid"),
+                    new CardAction(ActionTypes.ImBack, title: "3. ตรวจสอบสถานะ", value: "3"),
+                },
+                Images = new List<CardImage>
+                {
+                    new CardImage("http://localhost:3978/images/action.jpg", "Action Now!"),
+                }
+            };
+
+            var reply = MessageFactory.Attachment(card.ToAttachment());
+            await turnContext.SendActivityAsync(reply, cancellationToken);
         }
     }
 }
