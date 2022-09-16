@@ -17,6 +17,10 @@ const routes: Array<RouteRecordRaw> = [
     component: () => import('../views/ViewMessagePage.vue')
   },
   {
+    path: '/test',
+    component: () => import('../views/TestPage.vue')
+  },
+  {
     path: '/sell',
     component: () => import('../views/SellPage.vue')
   },
